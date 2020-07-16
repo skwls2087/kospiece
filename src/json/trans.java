@@ -17,7 +17,7 @@ public class trans
 		ResultSet rs  = null;
 		Connection conn = ConnectionProvider.getConnection();
 	
-	
+	System.out.println("여기왔다");
 	String sql = "SELECT DISTINCT sdetail FROM stock";
 	pstmt = conn.prepareStatement(sql);
 	rs = pstmt.executeQuery();

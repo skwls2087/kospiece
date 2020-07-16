@@ -49,7 +49,7 @@
     <nav class="nav">
         <!-- 맵, 실시간순위, 자유게시판, 공지사항, 가상투자, 마이페이지 -->
         <ul class="list">
-            <li class="list-item">
+        	<li class="list-item">
                 <a href="<%= request.getContextPath()%>/main.jsp">맵</a>
             </li>
             <li class="list-item">

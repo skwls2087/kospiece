@@ -1,3 +1,5 @@
+/admin/
+/board/
 /comment/
 /controller/
 /dao/
@@ -7,12 +9,9 @@
 /json/
 /main/
 /member/
-/model/
 /myComment/
 /mypage/
 /notice/
 /rank/
 /simulation/
 /util/
-/admin/
-/board/

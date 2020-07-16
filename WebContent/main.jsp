@@ -15,10 +15,8 @@ $(document).ready(function() { <%CrawlingLoad.Load();%> });
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
   function drawChart() {
     var data = google.visualization.arrayToDataTable([${chart}], true);
-
     var options = {
  	     legend: 'none',
  	     bar: { groupWidth: '80%' }, // Remove space between bars.
@@ -27,9 +25,7 @@ $(document).ready(function() { <%CrawlingLoad.Load();%> });
  	            risingColor: { strokeWidth: 0, fill: '#FF0400' }   // green
    	     }
  	};
-
     var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
-
     chart.draw(data, options);
   }
 </script>
@@ -43,10 +39,8 @@ $(document).ready(function() { <%CrawlingLoad.Load();%> });
 		        // create data
 		<% data dd = new data(); %>      
         var data = <%= trans.Data()%>
-
         // create a data tree
         var treeData = anychart.data.tree(eval(data), "as-tree");
-
         // create a treemap chart visualizing the data tree
         var chart = anychart.treeMap(treeData);
 		
@@ -64,7 +58,6 @@ $(document).ready(function() { <%CrawlingLoad.Load();%> });
         customColorScale.colors(["#f63538", "#bf4045", "#8b444e" ,"#414554", "#35764e", "#2f9e4f", "#30cc5a"]);
      // set the color scale as the color scale of the chart
         chart.colorScale(customColorScale);
-
      
         chart.maxDepth(3);
         chart.hintDepth(3);
@@ -85,12 +78,10 @@ $(document).ready(function() { <%CrawlingLoad.Load();%> });
         chart.hovered().headers().fontColor("#990000");
      // enable HTML for labels
         chart.labels().useHtml(true);
-
         // configure labels
         chart.labels().format(
           "<span style='font-weight:bold'>{%name}</span><br>{%value}"
         );
-
         // configure tooltips
         chart.tooltip().format(
           "등락률: {%value}\%\n시가총액(억): {%size}"
@@ -108,11 +99,9 @@ $(document).ready(function() { <%CrawlingLoad.Load();%> });
         		$(submit).trigger( "click" );
         		}
         });
-
 /*         state.get */
         // draw the chart
         chart.draw();
-
         
       });
    
