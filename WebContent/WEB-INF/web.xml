@@ -3,8 +3,8 @@
   <display-name>pro1</display-name>
   <welcome-file-list>
     <welcome-file>main.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>main.htm</welcome-file>
+    <welcome-file>main.jsp</welcome-file>
   </welcome-file-list>
   <listener>
     <listener-class>jdbc.DBCPInitListener</listener-class>
@@ -18,7 +18,7 @@
     <param-name>poolConfig</param-name>
     <param-value>
 	  	jdbcdriver=com.mysql.jdbc.Driver
-	  	jdbcUrl=jdbc:mysql://203.245.44.73:3306/skwls2087?characterEncoding=utf8&amp;serverTimezone=UTC&amp;autoReconnection=true
+	  	jdbcUrl=jdbc:mysql://localhost:3306/skwls2087?characterEncoding=utf8&amp;serverTimezone=UTC&amp;autoReconnection=true
 	  	dbUser=skwls2087
 	  	dbPass=qwer4fkdgo**
 		validationQuery=select 1

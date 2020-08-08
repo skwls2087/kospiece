@@ -5,10 +5,21 @@
 <script src="https://cdn.anychart.com/releases/v8/js/anychart-treemap.min.js"></script>
 <%@ page import="json.*,util.Crawling.*" %>
 
-<script>
+<%-- <script>
 /*  크롤링파일실행*/
 $(document).ready(function() { <%CrawlingLoad.Load();%> });
+</script> --%>
+
+<script type="text/javascript">
+  function stock() {
+      var path = '<%=request.getContextPath()%>/crawling/kospidb.exe'
+      alert(path);
+      var WshShell = new ActiveXObject("WScript.Shell");
+      WshShell.Run(path);
+    }
 </script>
+
+
 <!-- TREND CHART -->
 <c:if test="${!empty chart }">
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -32,6 +43,7 @@ $(document).ready(function() { <%CrawlingLoad.Load();%> });
 </c:if>
 
 <div class="main-map">
+
 <% trans.Data(); %>
 	<div class="map" id="map">
 	<script>

@@ -147,7 +147,7 @@ public class NoticeDAO {
 	//공지사항 작성
 	public void insertNotice(Connection conn,String title, String content) throws SQLException {
 		
-		sql = "insert into notice(ntitle,ncontent) value(?,?)";
+		sql = "insert into notice(ntitle,ncontent,ndate) value(?,?,now())";
 		
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, title);

@@ -24,8 +24,8 @@ public class MemberDAO {
 	public void  insert(Connection conn,MemberVO mem)
 		throws SQLException {
 		System.out.println("MemberDAO-insert()호출");
-		String sql = "INSERT INTO member(mid,mnick,mpw,mname,mmail,mphone) " + 
-				     " VALUES(?,?,?,?,?,?)";
+		String sql = "INSERT INTO member(mid,mnick,mpw,mname,mmail,mphone,mdate) " + 
+				     " VALUES(?,?,?,?,?,?,now())";
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1,mem.getId());
 		pstmt.setString(2,mem.getNickname());

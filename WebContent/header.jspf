@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>KOSPIECE</title>
+    <link rel="shortcut icon" type="image/x-icon" href="<%= request.getContextPath()%>/img/kospiece.png">
     <!-- 
     * 4.28수정사항
     1. css 파일 경로에 ContextPath추가(프로젝트 진행 시 server.xml의 수정을 고려하여 css파일 적용할 수 있게 하기 위함)
